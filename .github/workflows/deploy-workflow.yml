@@ -44,7 +44,6 @@ jobs:
       - name: Publish docker image
         env: 
           DOCKER_IMAGE_TAG: ${{steps.dockerImageTag.outputs.tag}}
-        working-directory: products
         run: |
           docker build -t commerce-products .
           docker tag commerce-products ${DOCKER_REPOSITORY}/${IMAGE_NAME}:${DOCKER_IMAGE_TAG}
