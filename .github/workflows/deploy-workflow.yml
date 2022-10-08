@@ -80,4 +80,4 @@ jobs:
     - name: Rollout new image
       shell: bash
       run: |
-        kubectl set image deployments/products=${DOCKER_REPOSITORY}/${IMAGE_NAME}:latest
+        kubectl set image deployments/products products=${DOCKER_REPOSITORY}/${IMAGE_NAME}:latest
